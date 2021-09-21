@@ -61,10 +61,22 @@ app.post('/api/notes', (req, res) => {
 
 //BONUS DELETE /api/notes/:id should receive a query parameter that contains the id of a note to delete.
 app.delete('/api/notes/:id', (req,res) => {
-  
+  const id = req.params.id;
+  fs.readFile(DB_PATH, (err, data) => {
+    //parsing the notes file
+    const parsedData = JSON.parse(data);
+    //grabbing the ID from the parameter
+    const newParsedData = parsedData.filter( data => data.id != id );
+    fs.writeFile (DB_PATH, JSON.stringify(newParsedData), (err) => {
+      if (err) {
+        console.error(err);
+      }else{
+        res.sendStatus(200);
+      }
+    })
+  })
+});
 
-
-})
 
 
 
@@ -76,8 +88,6 @@ app.get('*', (req, res) => {
 
 
 //listening port
-app.listen(PORT, () =>
+app.listen(PORT, () => {
   console.log(`App listening at http://localhost:${PORT}`)
-);
-
-
+});
