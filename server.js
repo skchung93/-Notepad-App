@@ -6,7 +6,7 @@ const path = require('path');
 const { v4: uuid } = require('uuid');
 const DB_PATH = path.join(__dirname, '/db/db.json')
 
-const PORT = process.env.port;
+const PORT = process.env.port || 3000;
 const app = express();
 
 app.use(express.json());
