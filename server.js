@@ -12,6 +12,12 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 
+//get / returns index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+});
+
+
 //Notes landing page
 app.get('/notes', (req, res) => {
   console.log('anything');
