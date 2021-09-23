@@ -37,3 +37,12 @@ If you want to test it, you'll need to create your own tests :)
 skchung93@gmail.com </br>
 skchung93  
 
+#### Landing Page
+<img width="1044" alt="Screen Shot 2021-09-22 at 10 16 45 PM" src="https://user-images.githubusercontent.com/85310173/134457796-a52695f6-eb1f-461e-b2f8-0b16b8ab428e.png">
+
+
+#### Note Page
+<img width="1047" alt="Screen Shot 2021-09-22 at 10 17 07 PM" src="https://user-images.githubusercontent.com/85310173/134457818-79a0ab64-6876-4b7d-9934-adb20ce16e6c.png">
+
+
+
